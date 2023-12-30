@@ -32,7 +32,7 @@ padding-right: 13%;
 
 @media(max-width:1250px){
     .bg_image{
-        width:60rem ;
+        width:62rem ;
    padding-top: 3rem;
    padding-bottom: 5rem;
     }
@@ -50,7 +50,50 @@ text-align: center;
 .top_button1{
     margin-top: 2rem;
 
+
 }
+.btn{
+    cursor:pointer;
+      position:relative;
+      padding:10px 20px;
+      background:white;
+      font-size:28px;
+      border-top-right-radius:10px;
+      border-bottom-left-radius:10px;
+      transition:all 1s;
+      &:after,&:before{
+        content:" ";
+        width:10px;
+        height:10px;
+        position:absolute;
+        border :0px solid #fff;
+        transition:all 1s;
+        }
+      &:after{
+        top:-1px;
+        left:-1px;
+        border-top:5px solid black;
+        border-left:5px solid black;
+      }
+      &:before{
+        bottom:-1px;
+        right:-1px;
+        border-bottom:5px solid black;
+        border-right:5px solid black;
+      }
+      &:hover{
+        border-top-right-radius:0px;
+      border-bottom-left-radius:0px;
+        /* // background:rgba(0,0,0,.5);
+        // color:white; */
+        &:before,&:after{
+          
+          width:100%;
+          height:100%;
+          /* // border-color:white; */
+        }
+      }
+    }
 
 /* middle container */
 .middle-container{
@@ -67,4 +110,163 @@ margin-top: 3.5rem;
 p{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+}
+
+/* bottom container */
+
+.bottom-container{
+padding-top: 9rem;
+text-align: center;
+}
+
+.purchase_heading{
+ padding-bottom: 4rem;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 20px auto;
+  width: 400px;
+  height: 550px;
+  background: white;
+  border-radius: 75px;
+
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  transition: 1s box-shadow;
+}
+
+.product:hover {
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+}
+
+.product:hover::before, div:hover::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 550px;
+  background: #FDA8CF;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.product:hover:after {
+  background: #F3CE5E;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
+}
+.salt_img{
+  width: 20rem;
+margin-bottom: 15rem;
+}
+.buy_btn{
+  position: absolute;
+  margin-top: 25rem;
+}
+.buy_text{
+  position: absolute;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 12rem;
+}
+
+/* end container */
+.end-container{
+  margin-top: 5rem;
+  background-color:#F3F8FF;
+  text-align: center;
+}
+.grow{
+  text-decoration: none;
+  color: black;
+  margin: 0 2rem 0 1rem;
+  padding-top: 1rem;
+  font-size: 10rem;
+  size: 3rem;
+}
+.grow:hover{
+  color:grey;
 }
