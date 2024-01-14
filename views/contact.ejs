@@ -1,0 +1,81 @@
+<%-include("header")-%>
+<div class="contact_main row">
+    <div class="col-lg-6 text">
+        <div class="container">
+            <h1 class="contact_text">Contact our team</h1>
+            <h5 class="contact_text">Have any question? We'd will love to hear from you.</h5>
+            <div class="contact_detail">
+                <ul>
+                    <li class="contact_list_item">We are here to help you regarding our product quality Our primary goal is to ensure your satisfaction with our products. Customer feedback is invaluable, and we are committed to addressing your concerns.</li>
+                    <li class="contact_list_item">Want to become out partnerRigorous quality control measures are in place at every stage of production.</li>
+                    <li class="contact_list_item">Or any other help or query Any questions about our products are welcomed, and we are ready to provide detailed information.</li>
+                    <li class="contact_list_item">feel free to ask We invest in research and development to bring innovative features to our products.</li>
+                    <li class="contact_list_item">Or any other help or query Any questions about our products are welcomed, and we are ready to provide detailed information.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-6 form">
+        <form action="/contact" method="post" class="contact_form">
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input name="first_name" type="text" class="form-control" id="floatingInput" placeholder="First Name" required>
+                        <label for="floatingInput">First Name*</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input name="last_name" type="text" class="form-control" id="floatingInput" placeholder="Last Name" required>
+                        <label for="floatingInput">Last Name*</label>
+                    </div>
+                </div>
+            </div>
+                <div class="form-floating mb-3">
+                        <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                        <label for="floatingInput">Email address*</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input name="mobile" type="tel" class="form-control" id="floatingInput" placeholder="Ph number" >
+                    <label for="floatingInput">Mobile number</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input name="country" type="text" class="form-control" id="floatingInput" placeholder="Country" required>
+                    <label for="floatingInput">Country*</label>
+                  </div>
+               <div class="form-floating mb-3">
+                    <input name="city" type="text" class="form-control" id="floatingInput" placeholder="City" required >
+                    <label for="floatingInput">City*</label>
+                </div>
+                <div class="form-floating">
+                    <textarea name="anything" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 150px"></textarea>
+                    <label for="floatingTextarea2">Anything else?</label>
+                  </div>
+                <p class="asterisk_required">Field marked with asterisk (*) are required.</p>
+            
+                  <button type="submit" class="btn btn-light btn-lg submit_btn">Submit</button>
+        </form>
+    </div>
+    <div class="address_details">
+        <h1 class="address_details_heading">Other Details</h1>
+        <div class="row">
+            <div class="col-4">
+                <h3 class="addredd_detail_items">Address</h3>
+                <h6>6, Shri Hari Complex, Lakadganj,<br>
+                    Nagpur, Maharashtra - 440008</h6>
+            </div>
+            <div class="col-4">
+                <h3 class="addredd_detail_items">Phone Number</h3>
+                <h6>Deepesh Lakhotia :- +91 9823047131</h6>
+                <h6>Krishna Lakhotia :- +91 9823147131  +61 444512697</h6>
+                <h6>Govind Lakhotia :- +91 8806418007</h6>
+            </div>
+            <div class="col-4">
+                <h3 class="addredd_detail_items">Mail</h3>
+                <h6>saltify.in@gmail.com</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<%-include("footer")-%>

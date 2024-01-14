@@ -26,7 +26,8 @@ text-align: center;
     background-color: white;
 }
 .nav_button{
-padding-right: 13%;
+padding-right: 1rem;
+padding-left: 1rem;
    font-size: 1.5rem;
 }
 
@@ -134,17 +135,19 @@ text-align: center;
   background: white;
   border-radius: 75px;
 
-  font-size: 20px;
-  font-weight: lighter;
-  letter-spacing: 2px;
-  transition: 1s box-shadow;
+  /* font-size: 20px;
+  font-weight: lighter; */
+  /* letter-spacing: 2px; */
+
+
+
 }
 
 .product:hover {
   box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
 }
 
-.product:hover::before, div:hover::after {
+.product:hover::before, .product:hover::after {
   display: block;
   content: '';
   position: absolute;
@@ -160,6 +163,8 @@ text-align: center;
   background: #F3CE5E;
   animation: 2s counterclockwise infinite;
 }
+
+
 
 @keyframes clockwise {
   0% {
@@ -269,4 +274,87 @@ margin-bottom: 15rem;
 }
 .grow:hover{
   color:grey;
+}
+.footer_rights{
+  margin-bottom: 0rem;
+  padding-right: 0rem;
+}
+
+
+
+
+/* contact us page code */
+
+.text{
+padding-bottom: 3rem;
+margin-top: 3rem;
+padding-top: 1rem;
+align-items: center;
+}
+.form{
+text-align: center;
+padding-top: 4rem;
+padding-left: 40rem;
+
+}
+.contact_text{
+  text-align: center;
+  padding-bottom: 1.5rem;
+  /* font-size: 1.2rem; */
+}
+
+
+
+.contact_detail{
+background-color: rgb(236, 231, 231);
+padding-top: 1rem;
+padding-bottom: 1rem;
+padding-right: 1rem;
+/* margin-left: 10rem;
+margin-top: 1rem;
+margin-right:3rem ; */ 
+margin:1rem 4rem auto 4rem ;
+}
+@media(max-width:1250px){
+  .contact_detail{
+    margin:1rem 1rem auto 1rem ;
+  }
+  }
+.contact_list_item{
+padding-top: 0.8rem;
+font-size:1.2rem ;
+}
+.submit_btn{
+margin-top: 2rem;
+margin-bottom: 10rem;
+
+}
+.contact_form{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.asterisk_required{
+  text-align: left;
+  padding-top: 2rem;
+}
+/* other details container */
+.address_details{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.address_details_heading{
+  margin-bottom: 3rem;
+}
+.addredd_detail_items{
+  margin-bottom: 2rem;
+}
+
+
+
+
+/* contact us success page code */
+
+.contact_success{
+  text-align: center;
+  padding-top: 4rem;
 }
