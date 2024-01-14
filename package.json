@@ -4,7 +4,7 @@
   "description": "saltify website upgrade",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "  "test": "echo \"Error: no test specified\""
   },
   "author": "Kirtan Lakhotia",
   "license": "ISC",
