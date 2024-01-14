@@ -63,8 +63,8 @@ res.render("contact_success",{
                   last_name:saved_last_name 
                 }) ;
 })
+// process.env.PORT||3000
 
-
-app.listen(process.env.PORT||3000,function(){
+app.listen(80,function(){
     console.log("server is running at port 3000") ;
 }) ;
