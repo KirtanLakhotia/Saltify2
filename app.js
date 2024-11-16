@@ -92,7 +92,6 @@ res.render("contact_success",{
 })
 // process.env.PORT||3000
 
-<<<<<<< HEAD
 
 app.get("/saltify_ai", function(req,res){
     // run("tell me things about bamboosalt") ;
@@ -106,12 +105,6 @@ app.post("/saltify_ai",async function(req,res){
 }) ;
 
 
-
-
-
-app.listen(process.env.PORT||3000,function(){
-=======
 app.listen(process.env.port || 8080,function(){
->>>>>>> e28525f9d9f9ff523f971fd8d1dd2170e4078c1b
-    console.log("server is running at port 3000") ;
+    console.log("server is running at port 8080") ;
 }) ;
