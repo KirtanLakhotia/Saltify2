@@ -48,6 +48,11 @@ padding-left: 1rem;
 padding: 0.7rem ;
 text-align: center;
 }
+.heading-down-p{
+  padding: 0.7rem ;
+  text-align: center;
+  font-size: 1.5rem;
+  }
 .top_button1{
     margin-top: 2rem;
 
@@ -100,6 +105,11 @@ text-align: center;
 .middle-container{
     padding-top: 5rem;
     text-align: center;
+}
+
+.info-text-p{
+  font-size: 1.2rem;
+
 }
 
 /* https://www.flaticon.com/animated-icons-most-downloaded */
@@ -283,6 +293,102 @@ margin-bottom: 15rem;
 
 
 
+
+
+/* review container */
+.review-container{
+  background-color: #305126;
+  height: 29rem;
+  
+}
+
+/* .review_img{
+  border-radius: 50%;
+
+  overflow: hidden;
+  object-fit: cover; 
+  width: 5%;
+
+  margin: auto;
+} */
+.review_main{
+text-align: center;
+
+height: 100%;
+
+}
+.review_main_second{
+
+ padding-left: 10%;
+ padding-right: 10%;
+padding-top: 4rem;
+
+}
+.review_text_div{
+}
+.review_text_div h1{
+  font-size: 3.5rem;
+  padding-bottom: 2rem;
+  color: white;
+}
+.review_text_div p{
+  font-size: 1.4rem;
+  color: white
+}
+
+
+/* whatsapp container  */
+
+
+.whatsapp-float {
+  position: fixed;
+
+  bottom: 3rem; /* Distance from the bottom */
+  right: 1.5rem;  /* Distance from the right */
+  z-index: 1000; /* Ensures it stays above other content */
+  color: #25d366; /* WhatsApp green color */
+  text-decoration: none; /* Removes underline */
+  border-radius: 50%; /* Makes it circular */
+  background: white; /* Background color for better visibility */
+  padding: 20px;
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+  background: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* ai container */
+.whatsapp-float-ai {
+  position: fixed;
+  bottom: 12rem; /* Distance from the bottom */
+  right: 1.5rem;  /* Distance from the right */
+  z-index: 1000; /* Ensures it stays above other content */
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.whatsapp-float-ai h3{
+font-style: italic;
+}
+
+.whatsapp-icon-ai {
+  width: 5rem;  /* Adjust size as needed */
+  height: 5rem;
+  border-radius: 50%; /* Makes it circular */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* Smooth animation on hover */
+}
+
+.whatsapp-icon-ai:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+
+
+
 /* contact us page code */
 
 .text{
@@ -357,4 +463,18 @@ margin-bottom: 10rem;
 .contact_success{
   text-align: center;
   padding-top: 4rem;
+}
+
+
+/* saltify ai page code  */
+
+.ai_interaction{
+  padding: 5rem;
+  text-align: center;
+
+}
+.submit_btn_ai{
+
+margin-top: 2rem;
+margin-bottom: 2rem;
 }
