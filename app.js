@@ -30,7 +30,7 @@ const contact_schema =new mongoose.Schema({
 
 async function run(text) {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-8b"});
-    const result = await model.generateContent(["you are an saltify ai. saltify is an bamboosalt manufacturing company. dont give response more than 5 lines: "+text]);
+    const result = await model.generateContent(["you are an saltify ai. saltify is an bamboosalt manufacturing company. dont give response more than 10 lines: "+text]);
     return result.response.text();
   }
 
@@ -92,10 +92,7 @@ res.render("contact_success",{
 })
 // process.env.PORT||3000
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 9f15dad57f81e7c26960c1251050bbc5b99ecc35
 
 app.get("/saltify_ai", function(req,res){
     // run("tell me things about bamboosalt") ;
@@ -109,16 +106,15 @@ app.post("/saltify_ai",async function(req,res){
 }) ;
 
 
-<<<<<<< HEAD
 async function trying() {
     const cry = await Contact.find() ;
    return cry ;
 }
 
 
-app.get("/k", async function(req,res){
+app.get("/cto", async function(req,res){
+    console.log("data is been seen")
     const a =await trying() ;
-    console.log(a) ; 
     let first_name = [];
     let last_name = [];
     let email = [];
@@ -128,44 +124,39 @@ app.get("/k", async function(req,res){
     let anything = [];
     
     for (var i = 0; i < a.length; i++) {
-        console.log(a[i].first_name);
+        // console.log(a[i].first_name);
         first_name.push(a[i].first_name);
     
-        console.log(a[i].last_name);
+        // console.log(a[i].last_name);
         last_name.push(a[i].last_name);
     
-        console.log(a[i].email);
+        // console.log(a[i].email);
         email.push(a[i].email);
     
-        console.log(a[i].mobile);
+        // console.log(a[i].mobile);
         mobile.push(a[i].mobile);
     
-        console.log(a[i].country);
+        // console.log(a[i].country);
         country.push(a[i].country);
     
-        console.log(a[i].city);
+        // console.log(a[i].city);
         city.push(a[i].city);
     
-        console.log(a[i].anything);
+        // console.log(a[i].anything);
         anything.push(a[i].anything);
     }
     
-    console.log("First Names:", first_name);
-    console.log("Last Names:", last_name);
-    console.log("Emails:", email);
-    console.log("Mobile Numbers:", mobile);
-    console.log("Countries:", country);
-    console.log("Cities:", city);
-    console.log("Anything:", anything);
+    // console.log("First Names:", first_name);
+    // console.log("Last Names:", last_name);
+    // console.log("Emails:", email);
+    // console.log("Mobile Numbers:", mobile);
+    // console.log("Countries:", country);
+    // console.log("Cities:", city);
+    // console.log("Anything:", anything);
     res.render("contact_data",{first_name:first_name,last_name:last_name,email:email,mobile:mobile,country:country,mobile:mobile,city:city,anything:anything}) ;
-=======
+
+}) ;
 app.listen(process.env.port || 8080,function(){
     console.log("server is running at port 8080") ;
->>>>>>> 9f15dad57f81e7c26960c1251050bbc5b99ecc35
+
 }) ;
-
-
-app.listen(process.env.port || 8080,function(){
-    console.log("server is running at port 8080") ;
-}) ;
-
