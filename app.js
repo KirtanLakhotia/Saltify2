@@ -30,7 +30,7 @@ const contact_schema =new mongoose.Schema({
 
 async function run(text) {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-8b"});
-    const result = await model.generateContent(["you are an saltify ai. saltify is an bamboosalt manufacturing company. dont give response more than 5 lines: "+text]);
+    const result = await model.generateContent(["you are an saltify ai. saltify is an bamboosalt manufacturing company. dont give response more than 10 lines: "+text]);
     return result.response.text();
   }
 
@@ -92,10 +92,7 @@ res.render("contact_success",{
 })
 // process.env.PORT||3000
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 9f15dad57f81e7c26960c1251050bbc5b99ecc35
 
 app.get("/saltify_ai", function(req,res){
     // run("tell me things about bamboosalt") ;
@@ -109,14 +106,13 @@ app.post("/saltify_ai",async function(req,res){
 }) ;
 
 
-<<<<<<< HEAD
 async function trying() {
     const cry = await Contact.find() ;
    return cry ;
 }
 
 
-app.get("/k", async function(req,res){
+app.get("/cto", async function(req,res){
     const a =await trying() ;
     console.log(a) ; 
     let first_name = [];
@@ -158,14 +154,12 @@ app.get("/k", async function(req,res){
     console.log("Cities:", city);
     console.log("Anything:", anything);
     res.render("contact_data",{first_name:first_name,last_name:last_name,email:email,mobile:mobile,country:country,mobile:mobile,city:city,anything:anything}) ;
-=======
+
+    
 app.listen(process.env.port || 8080,function(){
     console.log("server is running at port 8080") ;
->>>>>>> 9f15dad57f81e7c26960c1251050bbc5b99ecc35
+
 }) ;
 
 
-app.listen(process.env.port || 8080,function(){
-    console.log("server is running at port 8080") ;
-}) ;
 
