@@ -157,8 +157,7 @@ app.get("/k", async function(req,res){
 }) ;
 
 
-
-app.listen(process.env.PORT||3000,function(){
-
-    console.log("server is running at port 3000") ;
+app.listen(process.env.port || 8080,function(){
+    console.log("server is running at port 8080") ;
 }) ;
+
