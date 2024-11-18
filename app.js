@@ -92,7 +92,10 @@ res.render("contact_success",{
 })
 // process.env.PORT||3000
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9f15dad57f81e7c26960c1251050bbc5b99ecc35
 
 app.get("/saltify_ai", function(req,res){
     // run("tell me things about bamboosalt") ;
@@ -106,6 +109,7 @@ app.post("/saltify_ai",async function(req,res){
 }) ;
 
 
+<<<<<<< HEAD
 async function trying() {
     const cry = await Contact.find() ;
    return cry ;
@@ -154,6 +158,10 @@ app.get("/k", async function(req,res){
     console.log("Cities:", city);
     console.log("Anything:", anything);
     res.render("contact_data",{first_name:first_name,last_name:last_name,email:email,mobile:mobile,country:country,mobile:mobile,city:city,anything:anything}) ;
+=======
+app.listen(process.env.port || 8080,function(){
+    console.log("server is running at port 8080") ;
+>>>>>>> 9f15dad57f81e7c26960c1251050bbc5b99ecc35
 }) ;
 
 
