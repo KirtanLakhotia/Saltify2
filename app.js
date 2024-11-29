@@ -1,21 +1,22 @@
-const express =require("express") ;
-const ejs =require("ejs") ;
-const body_parser= require("body-parser") ;
-const mongoose = require("mongoose") ;
-const path = require('path');
-const app=express() ;
+require('dotenv').config();
 
+const express = require("express");
+const ejs = require("ejs");
+const body_parser = require("body-parser");
+const mongoose = require("mongoose");
+const path = require('path');
+
+const app = express();
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const genAI = new GoogleGenerativeAI("AIzaSyAd7_7KEVztjv6psnI97b7qkf0JuoGILEc");
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GENAI_API_KEY);
 
+mongoose.connect(process.env.MONGODB_URI);
 
-app.set('view engine','ejs') ;
-app.use(express.static("public")) ;
-app.use(body_parser.urlencoded({extended:true})) ;
+app.set('view engine', 'ejs');
+app.use(express.static("public"));
+app.use(body_parser.urlencoded({ extended: true }));
 
-// mongoose.connect('mongodb+srv://kirtanlakhotia:Kir%4002062@saltifywebapp.b7insjg.mongodb.net/SaltifyDB') ;
-mongoose.connect('mongodb+srv://kirtanlakhotia:Kir%4002062@saltifywebapp.b7insjg.mongodb.net/SaltifyDB') ;
 
 const contact_schema =new mongoose.Schema({
     first_name:String,
