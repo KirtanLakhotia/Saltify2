@@ -100,11 +100,17 @@ app.get("/saltify_ai", function(req,res){
     res.render("saltify_ai",{output:null}) ;
 }) ;
 
-app.post("/saltify_ai",async function(req,res){
-    console.log(req.body.text_input) ;
-    const ans= await run(req.body.text_input) ;
-    res.render("saltify_ai", { output: ans });    
-}) ;
+// app.post("/saltify_ai",async function(req,res){
+//     console.log(req.body.text_input) ;
+//     const ans= await run(req.body.text_input) ;
+//     res.render("saltify_ai", { output: ans });    
+// }) ;
+
+app.post("/saltify_ai", async function(req, res) {
+    console.log(req.body.text_input);
+    const ans = await run(req.body.text_input);
+    res.json({ output: ans }); // Send response as JSON
+});
 
 
 async function trying() {

@@ -1,5 +1,5 @@
 
-body{
+  body{
     margin: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -31,19 +31,6 @@ padding-left: 1rem;
    font-size: 1.5rem;
 }
 
-@media(max-width:1250px){
-    .bg_image{
-        width:62rem ;
-   padding-top: 3rem;
-   padding-bottom: 5rem;
-    }
-/* top container */
-}
-.heading_main{
-    color: green;
-    margin-top: 0px;
-    text-align: center;
-}
 .heading-down{
 padding: 0.7rem ;
 text-align: center;
@@ -397,7 +384,7 @@ margin-top: 3rem;
 padding-top: 1rem;
 align-items: center;
 }
-.form{
+.form_contact{
 text-align: center;
 padding-top: 4rem;
 padding-left: 40rem;
@@ -468,13 +455,223 @@ margin-bottom: 10rem;
 
 /* saltify ai page code  */
 
-.ai_interaction{
-  padding: 5rem;
-  text-align: center;
+     /* Centered Container */
+     .ai_detail {
+      max-width: 800px;
+      margin: 40px auto;
+      padding-left: 4rem;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 2px solid #3e8e41;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+    
+  
+  }
 
-}
-.submit_btn_ai{
+  .ai_detail:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(48, 81, 38, 0.2);
+  }
 
-margin-top: 2rem;
-margin-bottom: 2rem;
-}
+  /* Decorative Elements */
+
+
+  .ai_detail::before {
+      top: -40px;
+      left: -40px;
+  }
+
+  .ai_detail::after { 
+      bottom: -40px;
+      right: -40px;
+  }
+
+  .ai_detail:hover::before,
+  .ai_detail:hover::after {
+      transform: scale(1.3);
+      opacity: 0.7;
+  }
+
+  /* Header */
+  .ai_detail h1 {
+      font-size: 2.8rem;    
+      color: #2d6a4f;
+      text-align: center;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #2d6a4f, #40916c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1.2s ease;
+  }
+
+  /* Paragraph */
+  .ai_detail p {
+      font-size: 1.2rem;
+      color: #3b5a3a;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      animation: slideIn 1s ease;
+  }
+
+  /* Intro Section */
+  .intro-text {
+      font-size: 1.1rem;
+      color: #34495e;
+      text-align: center;
+      margin-top: 20px;
+      background: rgba(48, 81, 38, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      animation: fadeInUp 1.5s ease;
+  }
+
+  /* Input Form */
+  .ai_form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      padding-top: 20px;
+      animation: fadeIn 1.5s ease;
+  }
+
+  .ai_form .form-control {
+      width: 100%;
+      font-size: 1rem;
+      padding: 12px 15px;
+      border: 2px solid #3e8e41;
+      border-radius: 30px;
+      background: #f1f8fc;
+      box-shadow: inset 0 4px 8px rgba(48, 81, 38, 0.15);
+      outline: none;
+      color: #305126;
+      transition: all 0.3s ease-in-out;
+  }
+
+  form .form-control:focus {
+      background: #f4f7f2;
+      box-shadow: 0 0 12px rgba(48, 81, 38, 0.4);
+      transform: scale(1.02);
+  }
+
+  /* Submit Button */
+  button.submit_btn_ai {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+      background: linear-gradient(to right, #3e8e41, #4a6b44);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 8px rgba(48, 81, 38, 0.3);
+  }
+
+  button.submit_btn_ai:hover {
+      background: linear-gradient(to left, #3e8e41, #4a6b44);
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 6px 12px rgba(48, 81, 38, 0.5);
+  }
+
+  /* Output Section */
+  #output {
+      margin-top: 30px;
+      font-size: 1.1rem;
+      color: #305126;
+      text-align: center;
+  }
+
+  #output p {
+      background: #f0f9f1;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #305126;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      color: #305126;
+      transition: transform 0.3s ease-in-out;
+  }
+
+  #output p:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Loader */
+  #loader {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+  }
+
+  #loader img {
+      width: 50px;
+      height: 50px;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(50px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @keyframes slideIn {
+      from {
+          opacity: 0;
+          transform: translateX(-30px);
+      }
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+      .ai_detail h1 {
+          font-size: 2rem;
+      }
+
+      .ai_detail p {
+          font-size: 1rem;
+      }
+
+      form .form-control {
+          font-size: 0.9rem;
+      }
+
+      button.submit_btn_ai {
+          font-size: 0.9rem;
+      }
+  }
+
+
+
+
+
+
+
+
+
+

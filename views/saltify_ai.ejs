@@ -1,22 +1,30 @@
 <%-include("header")-%>
 
-<div class="ai_interaction">
-    <form action="/saltify_ai" method="post">
-        <!-- <input type="text" name="text_input" placeholder="text_inpu"> -->
-        <input class="form-control" type="text" name="text_input" value="" aria-label="readonly input example" >
+    <div class="ai_detail">
+        <h1>Welcome to Saltify AI</h1>
+        <p>Where Technology Meets Nature. Harnessing the power of AI to revolutionize industries with a sustainable, eco-conscious approach.</p>
+        <div class="intro-text">
+            <p>Saltify AI is your smart assistant for all your questions and problems. Ask anything, and it will provide clear answers, solutions, and guidance.
+                Start asking and see the magic of AI! </p>
+        </div>
 
-        <!-- <button type="submit" class="btn btn-primary mb-3">Enter</button> -->
-        <button type="submit" class="btn btn-light btn-lg submit_btn_ai">Submit</button>
-    </form>
-    
-    <div id="output">
-        <% if (output) { %>
-            <p><%= output %></p>
-        <% } %>
+        <!-- Input Form for User Interaction -->
+        <form class="ai_form" id="queryForm">
+            
+            <input class="form-control" type="text" placeholder="Enter your query" name="text_input" id="text_input" />
+            <button class="submit_btn_ai" type="submit">Submit Query</button>
+        </form>
+
+        <!-- Loader -->
+        <div id="loader">
+            <img src="https://i.imgur.com/llF5iyg.gif" alt="Loading...">
+        </div>
+
+        <!-- Output -->
+        <div id="output">
+            <p id="response_text">Waiting for input...</p>
+        </div>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-       
-</body>
-</html>
+    <script src="js/ai_output.js"></script>
+<%-include("footer")-%>
